@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { source } from '@/lib/source';
 
-const siteUrl = 'https://product-management-handbook.vercel.app';
+const siteUrl = 'https://shanes-pm-handbook.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

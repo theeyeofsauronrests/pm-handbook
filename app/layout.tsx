@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'A compact field guide for B2B Product Managers in regulated industries and smaller organizations.',
   authors: [{ name: 'Shane Quinlan' }],
   applicationName: 'Product Management Handbook',
-  metadataBase: new URL('https://product-management-handbook.vercel.app'),
+  metadataBase: new URL('https://shanes-pm-handbook.vercel.app'),
 };
 
 export const viewport: Viewport = {

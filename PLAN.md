@@ -1,45 +1,89 @@
-# Product Management Handbook Implementation Plan
+# Product Management Handbook Project Notes
 
-## Grounding
+## Current State
 
-- Primary authority is `CODEX_HANDOFF.md`.
-- Visual direction comes from `DESIGN_DIRECTION.md` and the DefSimple reference: dark, controlled, technical, high-contrast, and restrained.
-- Navigation follows `CONTENT_ARCHITECTURE.md`.
-- Seed articles in `seed-content/` are canonical starting copy. They will be tightened lightly, not rewritten into generic management prose.
+The handbook is live at [shanes-pm-handbook.vercel.app](https://shanes-pm-handbook.vercel.app/).
 
-## Conflicts and Assumptions
+It is a production-ready Next.js/Fumadocs documentation site for Shane Quinlan's Product Management Handbook. The site is dark mode only, public, and designed for straightforward Markdown/MDX maintenance.
 
-- The handoff includes organization-specific names that should not appear in the public handbook. The site will name the project as Shane Quinlan's Product Management Handbook and keep the framing organization-neutral.
-- Fumadocs documentation currently assumes Node.js 22+, Next.js 16, Tailwind CSS 4, `source.config.ts`, `createMDX`, and `collections/*` generated from `.source`. The implementation will follow those conventions.
-- Some first-release topics began without publish-ready source copy. They have been drafted conservatively and should receive author review before publication.
+The handbook is written for B2B Product Managers in regulated or compliance-heavy startups and scale-ups. It is not a B2C growth playbook, a corporate policy portal, or a mature big-tech operating model.
 
-## Build Plan
+## Current Stack
 
-1. Scaffold a Next.js App Router project with TypeScript, pnpm, Tailwind CSS 4, Fumadocs UI, and Fumadocs MDX.
-2. Configure Fumadocs MDX under `content/docs`, generate the page tree from `meta.json`, and expose search through the built-in Orama-backed API.
-3. Implement dark-only behavior at the document and provider level: no theme switcher, no light first paint, dark color scheme, and restrained global CSS.
-4. Build the homepage as a compact handbook entry point, not a marketing funnel.
-5. Import the ready seed articles as MDX and organize the IA into docs folders with navigation metadata.
-6. Add the requested MDX components: `Principle`, `PMTakeaway`, `Warning`, `SourceList`, and `ArtifactPath`.
-7. Add concise draft pages for content gaps that require Shane or source-material review.
-8. Write README instructions for local development, content authoring, navigation, validation, and Vercel deployment.
-9. Validate with `pnpm dev`, `pnpm build`, `pnpm lint`, and `pnpm typecheck`.
+- Next.js App Router
+- TypeScript
+- Fumadocs UI
+- Fumadocs MDX
+- Tailwind CSS
+- pnpm
+- Node.js 22+
+- Vercel
 
-## Applied Source Expansion
+## Implemented
 
-- Added source-backed guidance for metrics as decision signals, emphasizing outcomes, leading indicators, and misuse risks.
-- Added source-backed guidance for cloud costs, translating FinOps concepts into product behavior: rate, time, scale, refresh frequency, retention, fan-out, map tiles, idle behavior, and always-on capacity.
-- Folded the new delivery source into existing pages for tickets, stories, bugs, spikes, backlog management, roadmaps, agile delivery, branching, and CI/CD without splitting every artifact into a separate thin page.
-- Folded the design and discovery source into the existing discovery/design pages while removing organization-specific tooling and any assumption that reuse is the default answer.
-- Folded `Product_Handbook_v3_Draft.md` into the public handbook where it added authorial point of view: Product Manager versus Product Owner, Product Trio, continuous discovery, design handoff, just-enough ticket writing, Scrum Master as facilitation, and skepticism toward scaled-process theater.
-- Added a sparse `LLMLeverage` callout pattern for responsible AI use in PM workflows, focused on structure, critique, and clustering rather than outsourcing judgment.
-- Added explicit audience framing: B2B Product Management in regulated or compliance-heavy startups and scale-ups, based on Shane's experience across cyber, compliance, healthcare, defense, and fintech. The handbook is not positioned as a B2C growth playbook or mature big-tech operating model.
-- Kept the Lenny skills material as an analysis rubric, not a replacement voice.
+- Built the docs site with Fumadocs navigation, mobile navigation, search, right-side table of contents, and previous/next links.
+- Implemented a dark-only visual direction: restrained surfaces, high contrast, no theme switcher, and no light-theme fallback.
+- Imported and refined the handbook content into editable MDX under `content/docs`.
+- Generalized old internal/product-specific language into public, portable language.
+- Added explicit audience framing for smaller B2B organizations in regulated or compliance-heavy contexts.
+- Added author context and resource links in `About Shane Quinlan`.
+- Added custom MDX components: `Principle`, `PMTakeaway`, `Warning`, `LLMLeverage`, `BadBetter`, `SourceList`, and `ArtifactPath`.
+- Added responsible LLM guidance that treats AI as a thinking aid, not a substitute for PM accountability.
+- Added engineering-facing PM guidance for cloud costs, dependencies, PR/MR reading, SemVer, CI/CD, APIs, and delivery signals.
+- Added security headers, production metadata, sitemap, robots, and Vercel-ready build configuration.
+- Pinned dependency versions and added a pnpm override for patched `postcss`.
+
+## Editorial Direction
+
+The handbook should stay:
+
+- Direct
+- Succinct
+- Opinionated
+- Skeptical of process theater
+- Clear about politics and accountability
+- Useful for Product, Design, and Engineering collaboration
+- Maintainable as Markdown
+
+It should not drift into:
+
+- Generic product-management encyclopedia content
+- A certification course
+- A template library
+- A big-tech operating model
+- A personal marketing site
 
 ## Remaining Author Review
 
-- Add public, source-approved examples for discovery framing, cost tradeoffs, roadmap confidence, and AI artifact promotion.
-- Decide whether cloud-cost guidance should include one detailed example system or stay pattern-based.
-- Review glossary terms for which definitions should remain in the public handbook.
-- Confirm whether any highly regulated environment examples should be explicit or kept generalized.
-- Final source notes and author-approved references.
+The highest-value next work is a small number of public-safe examples that show product judgment in motion:
+
+- A cloud-cost tradeoff example, such as refresh rate, retention, fan-out, map tiles, or idle capacity.
+- A backlog example showing a stale item archived, reframed, or promoted using current knowledge.
+- A complete short Blog / FAQ sample.
+- A roadmap confidence example showing work moved from committed to exploratory.
+- An LLM-generated ticket corrected by a PM who understands intent, risk, and impact.
+- An AI artifact promotion example, once the operating stance is settled.
+
+See [CRITICAL_ANALYSIS.md](./CRITICAL_ANALYSIS.md) for the current editorial critique.
+
+## Validation
+
+Run before pushing:
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+```
+
+For local review:
+
+```bash
+pnpm dev
+```
+
+or:
+
+```bash
+pnpm exec next dev --port 3002
+```

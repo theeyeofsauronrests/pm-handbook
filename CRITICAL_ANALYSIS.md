@@ -2,7 +2,7 @@
 
 ## Review Method
 
-This review evaluates the current handbook site.
+This review evaluates the current handbook site: [shanes-pm-handbook.vercel.app](https://shanes-pm-handbook.vercel.app/).
 
 It uses the RefoundAI Lenny skills repository as an editorial rubric rather than runtime tooling:
 
