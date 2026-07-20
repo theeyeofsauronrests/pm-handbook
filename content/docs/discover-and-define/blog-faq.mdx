@@ -1,23 +1,43 @@
 ---
 title: Blog / FAQ
-description: A lightweight artifact for aligning on a feature, program, project, or contract.
+description: A lightweight working-backwards artifact for turning intent into decision-quality framing.
 ---
 
-A Blog / FAQ is a feature- or program-level framing artifact.
+A Blog / FAQ is a framing artifact.
 
-Use it to create shared understanding before work fragments into stories, design tasks, technical spikes, and implementation details.
+Use it when the team needs to explain a future product, feature, program, or project before work fragments into tickets, design tasks, technical spikes, stakeholder updates, and implementation details.
 
-It borrows the useful part of working backwards: write the future explanation before the team falls in love with the implementation.
+It borrows the useful part of [working backwards](https://www.aboutamazon.com/news/workplace/an-insider-look-at-amazons-culture-and-processes): write the future explanation before the team falls in love with the implementation.
 
-It is useful when:
+The point is not prose quality. The point is decision quality.
 
-- Defining a net-new feature
-- Launching a program or project
-- Starting work for a new customer or contract
-- Coordinating across teams
-- Clarifying intent before significant investment
+## When it is useful
 
-It is not a contract, a complete PRD, or a replacement for tickets.
+Use a Blog / FAQ when the work is large enough that misunderstanding would be expensive.
+
+It is especially useful when:
+
+- The team is defining a net-new capability
+- Stakeholders disagree about the real problem
+- A customer, buyer, or internal sponsor is asking for a solution before the team understands the need
+- Design and Engineering need context before shaping options
+- The work will create commitments, dependencies, or support obligations
+- The team needs to decide what not to build
+
+A good Blog / FAQ lets people argue about the right thing earlier.
+
+## When it is theater
+
+A Blog / FAQ becomes theater when it:
+
+- Retrofits a problem around a preferred solution
+- Turns uncertainty into confident narrative
+- Avoids naming tradeoffs, owners, constraints, or risks
+- Reads like marketing copy for internal approval
+- Fails to change the next decision
+- Becomes a substitute for user contact, design critique, engineering review, or delivery planning
+
+If the artifact makes everyone feel aligned without exposing any disagreement, be suspicious.
 
 ## Structure
 
@@ -25,21 +45,88 @@ It is not a contract, a complete PRD, or a replacement for tickets.
 
 Describe the intended capability in plain language.
 
+Do not start with architecture, tooling, or a feature list. Start with the thing a user, customer, operator, administrator, or internal team will experience.
+
 ### What problem does it solve?
 
-Describe the user, mission, or organizational problem.
+Describe the specific struggling moment.
+
+Useful problem framing includes:
+
+- Who has the problem
+- What they are trying to do
+- What breaks, slows down, creates risk, or creates cost
+- What workaround exists today
+- Why the problem matters now
+- Whether this is a user problem, business problem, or both
+
+<BadBetter>
+**Bad:** "Customers need better reporting."
+
+**Better:** "Support leaders cannot tell which customers are repeatedly hitting the same onboarding failure until escalations appear in Slack. They manually combine support notes, CRM context, and product events after the damage is already visible."
+</BadBetter>
+
+The bad version names a category. The better version names a person, moment, current workaround, and consequence.
 
 ### How are we solving it?
 
 Explain the proposed approach, constraints, and important tradeoffs.
 
+This section should say enough for Design and Engineering to react. It should not pretend implementation has already been solved.
+
+Include:
+
+- The proposed product shape
+- What is intentionally out of scope
+- What must be true for the approach to work
+- The major risks
+- The known dependencies
+- The cheapest useful way to learn
+
 ### User FAQ
 
 Capture questions users, customers, or testers are likely to ask.
 
+Good user FAQ questions expose practical reality:
+
+- What can I do after this exists?
+- What still requires manual work?
+- What happens when the data is wrong, late, or missing?
+- What permissions, roles, or approvals matter?
+- What should I trust, and what should I verify?
+- How does this change my workflow?
+
 ### Internal FAQ
 
-Capture questions Product, Design, Engineering, security, delivery, and sustainment teams need answered.
+Capture questions Product, Design, Engineering, security, delivery, support, sales, and leadership need answered.
+
+Good internal FAQ questions expose hidden disagreement:
+
+- What decision are we asking for?
+- What are we not building?
+- What would make us stop?
+- What is the riskiest assumption?
+- How reversible is this?
+- Who owns the ongoing cost?
+- What dependency could change the plan?
+- What promise has already been made?
+- What user signal would count as evidence?
+
+If the internal FAQ does not make anyone uncomfortable, it may not be doing enough work.
+
+## Readiness check
+
+Before breaking a Blog / FAQ into tickets, ask:
+
+- Is the user and problem specific enough?
+- Are knowns, assumptions, and unknowns separated?
+- Are scope exclusions explicit?
+- Have Design and Engineering changed the shape of the idea?
+- Are the major tradeoffs visible?
+- Is there a decision trigger for continuing, changing, or stopping?
+- Would a new person understand why this work matters?
+
+The artifact does not need to be perfect. It needs to be honest enough to guide the next decision.
 
 ## Relationship to tickets
 
@@ -47,7 +134,11 @@ The Blog / FAQ defines intent and direction.
 
 Tickets coordinate execution.
 
-If every ticket reopens the basic feature debate, the feature framing is probably incomplete.
+If every ticket reopens the basic feature debate, the Blog / FAQ is probably incomplete. If the Blog / FAQ dictates every implementation detail, it is probably overreaching.
+
+<PMTakeaway>
+Use Blog / FAQ to expose the problem, tradeoffs, and questions before the team optimizes the wrong work. The artifact is useful only if it changes what happens next.
+</PMTakeaway>
 
 <SourceList
   sources={[

@@ -316,6 +316,17 @@ hr {
   color: var(--pmh-green);
 }
 
+.pmh-mdx-panel[data-tone='bad-better'] {
+  border-left: 3px solid var(--pmh-red);
+  background:
+    linear-gradient(90deg, rgba(239, 68, 68, 0.08), transparent 36%),
+    var(--pmh-carbon);
+}
+
+.pmh-mdx-panel[data-tone='bad-better'] .pmh-mdx-panel-title {
+  color: #fca5a5;
+}
+
 .pmh-mdx-panel-title {
   margin: 0 0 0.35rem;
   color: var(--pmh-white);

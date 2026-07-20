@@ -33,7 +33,7 @@
 - Folded the design and discovery source into the existing discovery/design pages while removing organization-specific tooling and any assumption that reuse is the default answer.
 - Folded `Product_Handbook_v3_Draft.md` into the public handbook where it added authorial point of view: Product Manager versus Product Owner, Product Trio, continuous discovery, design handoff, just-enough ticket writing, Scrum Master as facilitation, and skepticism toward scaled-process theater.
 - Added a sparse `LLMLeverage` callout pattern for responsible AI use in PM workflows, focused on structure, critique, and clustering rather than outsourcing judgment.
-- Added explicit audience framing: B2B Product Management in regulated or compliance-heavy startups and scale-ups, based on Shane's experience across cyber, compliance, healthcare, defense, and fintech. The handbook is not positioned as a B2C growth playbook or MANGA-scale operating model.
+- Added explicit audience framing: B2B Product Management in regulated or compliance-heavy startups and scale-ups, based on Shane's experience across cyber, compliance, healthcare, defense, and fintech. The handbook is not positioned as a B2C growth playbook or mature big-tech operating model.
 - Kept the Lenny skills material as an analysis rubric, not a replacement voice.
 
 ## Remaining Author Review

@@ -3,6 +3,7 @@ import type { MDXComponents } from 'mdx/types';
 
 import {
   ArtifactPath,
+  BadBetter,
   LLMLeverage,
   PMTakeaway,
   Principle,
@@ -14,6 +15,7 @@ export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
     ArtifactPath,
+    BadBetter,
     LLMLeverage,
     PMTakeaway,
     Principle,

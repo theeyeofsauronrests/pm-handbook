@@ -85,7 +85,7 @@ export default function HomePage() {
         <p>
           It comes from Shane Quinlan&apos;s experience in startups and scale-ups across cyber,
           compliance, healthcare, defense, and fintech. It is not trying to be a
-          B2C growth manual or a Google-scale operating model.
+          B2C growth manual or a mature big-tech operating model.
         </p>
       </section>
 

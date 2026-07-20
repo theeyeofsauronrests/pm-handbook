@@ -2,50 +2,136 @@
 
 ## Review Method
 
-This review uses the RefoundAI Lenny skills repository as an editorial rubric, not as installed tooling.
+This review evaluates the current handbook site.
 
-The most relevant lenses are:
+It uses the RefoundAI Lenny skills repository as an editorial rubric rather than runtime tooling:
 
-- [Planning under uncertainty](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/planning-under-uncertainty/SKILL.md): does the handbook value learning and adaptation over fake certainty?
-- [Evaluating trade-offs](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/evaluating-trade-offs/SKILL.md): does it make costs, constraints, and second-order effects explicit?
-- [Systems thinking](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/systems-thinking/SKILL.md): does it help PMs see incentives, feedback loops, and ecosystem effects?
-- [Platform strategy](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/platform-strategy/SKILL.md): does it treat existing capabilities as options with users, interfaces, adoption costs, and ownership?
-- [Problem definition](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/problem-definition/SKILL.md): does it separate the problem, user context, and solution?
-- [Working backwards](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/working-backwards/SKILL.md): does it use future-state artifacts without turning them into theater?
-- [Design engineering](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/design-engineering/SKILL.md): does it respect the overlap between design and engineering without collapsing accountability?
-- [Vibe coding](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/vibe-coding/SKILL.md): does it treat AI-assisted prototypes as learning tools rather than production evidence?
+- [Planning under uncertainty](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/planning-under-uncertainty/SKILL.md): adaptive planning, decision triggers, reversible decisions, and learning over false certainty.
+- [Evaluating trade-offs](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/evaluating-trade-offs/SKILL.md): hidden costs, opportunity cost, second-order effects, sunk-cost checks, and clear either/or choices.
+- [Systems thinking](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/systems-thinking/SKILL.md): incentives, feedback loops, accumulated cost, and effects beyond the immediate feature.
+- [Platform strategy](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/platform-strategy/SKILL.md): internal capabilities as products with users, owners, interfaces, adoption cost, and governance.
+- [Problem definition](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/problem-definition/SKILL.md): struggling moments, problem/solution separation, and business-versus-user problem clarity.
+- [Working backwards](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/working-backwards/SKILL.md): future-state artifacts that force customer value, feasibility questions, and strategic fit into view.
+- [Design engineering](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/design-engineering/SKILL.md): productive overlap between design and engineering without collapsing accountability.
+- [Vibe coding](https://raw.githubusercontent.com/RefoundAI/lenny-skills/main/skills/vibe-coding/SKILL.md): AI-assisted artifacts as iteration aids with explicit limits, not production evidence.
+
+The central test: does the handbook help a PM make a better decision under constraint?
+
+## Overall Assessment
+
+The handbook now has a coherent audience, voice, and operating philosophy.
+
+It is clearly written for B2B Product Managers in regulated or compliance-heavy startups and scale-ups. That context gives the advice practical force without turning it into an industry-specific rulebook. The handbook is not trying to be a consumer-growth manual, a corporate policy portal, or a mature big-tech operating model.
+
+The voice is its main advantage. It is skeptical of process theater, executive certainty, inflated roadmaps, weak tickets, vague AI enthusiasm, and PMs hiding behind artifacts. It preserves Shane's perspective: Product Management is judgment under constraint, and the PM is accountable for making tradeoffs visible even when they do not control the org chart.
+
+The latest version is stronger because it now shows more applied judgment. Blog / FAQ, Metrics and Signals, and Features/Epics/Themes/Roadmaps include sharper bad/better contrasts. Several pages now name systems effects directly: stale backlog items create attention debt, reuse can move risk between teams, cloud cost compounds through behavior, and planning language changes incentives.
+
+The handbook is ready to be useful in public. The next improvement should be a small number of public-safe examples, not more conceptual coverage.
 
 ## Strongest Current Patterns
 
-- The handbook has a clear point of view: PMs own judgment under constraint, not ticket volume or feature advocacy.
-- The audience is now explicit: B2B PMs in regulated or compliance-heavy startups and scale-ups, not B2C growth teams or MANGA-scale product organizations.
-- The best pages are short and practical. They avoid framework worship and keep returning to tradeoffs, clarity, reliability, and delivery.
-- The AI guidance is appropriately skeptical. It separates fluency from truth and distinguishes artifact speed from actual learning.
-- The engineering-facing material gives PMs useful signals without pretending they are code reviewers.
+- **Accountability is the spine.** PMs cannot outsource judgment to Jira, an LLM, a design system, an engineering review, a roadmap, or a stakeholder request.
+- **Politics is treated as real work.** The Product Management page correctly frames politics as incentives, authority, commitments, fear, budgets, and avoided decisions.
+- **Artifacts are judged by whether they change decisions.** Tickets, roadmaps, Blog / FAQs, prototypes, and metrics are useful only when they expose tradeoffs, uncertainty, or next action.
+- **The handbook is opinionated without becoming doctrinaire.** It says what to stop doing, but it usually explains the tradeoff rather than replacing one ritual with another.
+- **Planning abstractions are handled with unusual clarity.** Features, epics, themes, initiatives, and roadmaps are defined by their job, not by Jira taxonomy.
+- **AI guidance is appropriately severe.** LLMs are useful for preparation, synthesis, critique, and artifact shaping. They are not substitutes for evidence, collaboration, or accountability.
+- **Engineering topics are translated into product judgment.** Cloud cost, dependencies, releases, PR/MR reading, APIs, and CI/CD are framed as signals PMs can understand without pretending to be engineers.
+- **The public language is mostly clean.** The old internal and company-specific framing has been generalized, and the large-company contrast is now category-based.
 
-## Risks and Gaps
+## Remaining Risks
 
-- The first applied pass has generalized the named internal concepts, but author review should still check whether examples feel portable outside their original context.
-- Build/reuse/buy decisions now treat reuse as one option rather than the default. The next improvement should add concrete examples of starting-point decisions.
-- Discovery and framing now name truth, hypotheses, unknowns, boundaries, discipline-specific risk, and decision signals. The next improvement should add public examples.
-- The Product role guidance now more clearly treats politics as part of the PM job, separates Product Manager from Product Owner, and rejects the "CEO of the product" myth.
-- Metrics guidance now treats KPIs as decision inputs rather than narrative proof. The next improvement should connect metrics examples to real product decisions.
-- Cloud-cost guidance now makes product behavior visible as cost behavior. The next improvement should decide whether to include a full example system.
-- Planning and delivery now distinguish reversible decisions, decision triggers, sunk-cost checks, confidence levels, ticket types, just-enough ticket detail, planning abstractions, facilitation work, and process failure modes.
-- Design and engineering collaboration now treats productive friction as signal. The next improvement should add examples from real product reviews.
-- AI guidance now treats LLMs as thinking aids for structure, critique, clustering, and pressure-testing. It explicitly avoids handing intent, risk, impact, or accountability to the model. The next improvement should add example promotion evidence for one artifact.
+### 1. The handbook still needs a few worked examples
 
-## Recommended Revisions
+The handbook now has better examples than before, but most pages still stop at diagnostic questions. That is useful, but examples show the real judgment.
 
-- Continue replacing local shorthand with durable public terms.
-- Add concrete examples where doing so would not expose internal context.
-- Add a short source-approved example to each of: discovery framing, cost tradeoff, build/reuse/buy choice, delivery decision triggers, and AI artifact promotion.
-- Keep checking new content against the decision tenets so the handbook does not drift into generic framework language.
+Add examples only where they change reader behavior. The site does not need case-study sprawl.
+
+Highest-value examples:
+
+- A stale backlog item archived or reframed using today's knowledge.
+- A cloud-cost tradeoff where refresh rate, retention, or fan-out changes product scope.
+- A complete but short Blog / FAQ for a public-safe scenario.
+- A roadmap item moved from committed to exploratory because confidence is low.
+- An LLM-generated ticket corrected by a PM who understands intent, risk, and impact.
+
+### 2. Blog / FAQ needs one complete sample
+
+The Blog / FAQ page is now a strong working-backwards guide. It explains when the artifact is useful, when it becomes theater, what questions belong in it, and how to know whether it is ready to break into tickets.
+
+The remaining gap is imitation. A reader can understand the artifact, but a complete sample would make it easier to use.
+
+The sample should be short and obviously imperfect. It should show:
+
+- A specific user and struggling moment.
+- A proposed approach with exclusions.
+- Internal FAQ questions that expose disagreement.
+- A decision trigger.
+- A path into tickets or spikes.
+
+### 3. Systems thinking should stay embedded
+
+The handbook has correctly avoided a generic systems-thinking chapter. That would probably make the site feel more academic and less useful.
+
+Keep systems thinking embedded where product decisions create second-order effects:
+
+- Backlog items accumulate attention debt.
+- Metrics create incentives.
+- Reuse moves risk unless ownership and interfaces are clear.
+- Cloud-cost choices compound through behavior.
+- Roadmaps can become promises.
+- Cross-functional friction reveals different classes of risk.
+
+The move is not "add systems thinking." The move is "show what changes downstream."
+
+### 4. AI artifact promotion remains unresolved
+
+The AI charter is strong as philosophy. Its lane model is sensible: exploration, incubation, integration, and legacy modification should not be managed the same way.
+
+The missing piece is still a concrete promotion example.
+
+Do not rush it. The example will carry a lot of weight because it will imply an operating model. It should be added only when the author is comfortable with the governance stance.
+
+When ready, show one path:
+
+`Prototype -> incubation artifact -> reviewed artifact -> production-bound contribution`
+
+The key evidence should include owner, destination, workflow, constraints, review gate, tests, failure modes, integration path, and rollback or support plan.
+
+### 5. The handbook could drift into a template library
+
+The reusable Bad / Better pattern is valuable, but it introduces a new risk: examples can become canned advice.
+
+Guardrail: every example should show a decision changing. If an example only demonstrates nicer wording, cut it.
+
+## Recommended Next Changes
+
+1. **Add one Cloud Costs example.**
+   Show a PM decision where one-second refresh becomes ten-second refresh, raw retention becomes summarized retention, or live fan-out is constrained by actual workflow need.
+
+2. **Add one Backlog Management example.**
+   Show a stale item moving to archive, rewrite, or promotion based on today's-knowledge logic.
+
+3. **Add one complete Blog / FAQ sample.**
+   Keep it short. The goal is to demonstrate judgment, not produce a reusable corporate template.
+
+4. **Leave the AI promotion example pending.**
+   The concept is right, but the example should wait until the author decides how operational the charter should be.
+
+5. **Keep future examples sharp.**
+   Each example should answer: what was vague, what changed, who pays the cost, and what decision follows?
 
 ## Open Author Questions
 
-- What source material should define discovery and framing in Shane's voice?
-- Which examples of build/reuse/buy decisions can be described publicly without exposing organization-specific names?
-- Should the handbook include a short decision-tenets page for recurring PM tradeoffs?
-- How much AI-assisted prototyping guidance belongs in the handbook versus a separate working guide?
-- Which glossary terms should be public terms, and which were only internal shorthand?
+- Which public-safe scenario should become the sample Blog / FAQ?
+- What is the most useful cloud-cost example: refresh rate, retention, fan-out, maps, or idle capacity?
+- Should backlog examples be written generically, or should they use a realistic B2B regulated-workflow scenario?
+- Should the AI charter remain philosophical, or should it become a practical governance model?
+- Where is the line between giving PMs enough engineering context and encouraging PMs to cosplay as engineers?
+
+## Bottom Line
+
+The handbook is now coherent enough to publish and useful enough to maintain.
+
+Its next stage is not breadth. It is proof of judgment. Add a few examples that show how Shane wants PMs to make decisions when the artifact is messy, the politics are real, the system effects matter, and certainty is unavailable.

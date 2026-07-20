@@ -46,6 +46,15 @@ export function LLMLeverage({ children, title = 'LLM Leverage' }: PanelProps) {
   );
 }
 
+export function BadBetter({ children, title = 'Bad / Better' }: PanelProps) {
+  return (
+    <aside className="pmh-mdx-panel" data-tone="bad-better">
+      <p className="pmh-mdx-panel-title">{title}</p>
+      <div>{children}</div>
+    </aside>
+  );
+}
+
 export function SourceList({ sources }: { sources: Source[] }) {
   return (
     <ul className="pmh-source-list">
