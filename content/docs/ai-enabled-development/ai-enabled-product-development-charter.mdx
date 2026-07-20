@@ -1,0 +1,94 @@
+---
+title: AI-Enabled Product Development Charter
+description: A lane-based model for moving AI-accelerated artifacts toward production.
+---
+
+## Intent
+
+If we are serious about moving AI-assisted work toward production, we need a clear model for how LLM tooling fits into real delivery paths.
+
+This charter defines role accountability, governance lanes, promotion paths, and incentives that reward integration rather than prompt output.
+
+LLMs compress execution cycles. They do not flatten responsibility.
+
+## Preserve role accountability
+
+- **Product — Viability:** Should this exist, and does it solve a real problem under real constraints?
+- **Design — Usability:** Can humans understand and operate it correctly?
+- **Engineering — Feasibility and robustness:** Will it integrate, scale, and behave predictably?
+- **Programs — Delivery and sustainment:** Can it be deployed, supported, and evolved responsibly?
+
+Blurry collaboration is expected. Blurred accountability is not.
+
+## Governance by lane
+
+### Lane A — Exploration
+
+**Purpose:** Reduce ambiguity quickly.
+
+Synthetic data and lightweight tools are acceptable. Artifacts must be labeled non-production and should produce validated learning plus a decision to promote, iterate, or discard.
+
+### Lane B — Incubation
+
+**Purpose:** Prepare promotable concepts.
+
+Artifacts become schema-aware, account for existing systems and constraints, and define their intended destination. Inputs, outputs, limits, and known edge cases should become explicit.
+
+### Lane C — Program Integration
+
+**Purpose:** Produce a production-bound contribution.
+
+Engineering review, security review, CI/CD, integration validation, and predictable error handling are required. LLM-generated code does not bypass review.
+
+### Lane D — Legacy Modification
+
+**Purpose:** Make controlled changes to active systems.
+
+Regression discipline, backward compatibility, architecture oversight, and release governance take priority over acceleration.
+
+## Promotion is an explicit transition
+
+The path is:
+
+`Prototype → Incubation → reviewed artifact → production-bound contribution`
+
+Each transition requires a named owner, explicit criteria, an appropriate review gate, and tooling aligned to the intended destination.
+
+Nothing should accidentally ship.
+
+## Promotion requires evidence
+
+Before an AI-assisted artifact moves toward production, the team should be able to name:
+
+- The owner
+- The intended destination
+- The user or workflow it supports
+- The constraints it must respect
+- The review gate it has passed
+- The tests or validation behind it
+- The known failure modes
+- The integration path
+
+If that evidence is missing, the artifact may still be useful. It is not ready to promote.
+
+## Reward integration, not output
+
+Reward:
+
+- Experiments that reduce ambiguity
+- Artifacts that survive review
+- LLM workflows that reduce cycle time without increasing downstream rewrite cost
+- Narrow, predictable capabilities
+
+Do not reward:
+
+- Prompt volume
+- Demo-only artifacts presented as production-ready
+- Expanded surface area without clear constraints
+- Code that must be rewritten from scratch
+
+Velocity without integration is churn.
+
+## Bottom line
+
+The goal is not to create prompt engineers. It is to build cross-functional teams that use LLMs to move validated artifacts toward production while preserving differentiated expertise and architectural integrity.

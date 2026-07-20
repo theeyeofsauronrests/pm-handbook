@@ -1,0 +1,105 @@
+---
+title: Responsible LLM Use for PMs
+description: How PMs can use LLMs without confusing artifact speed for learning, judgment, or collaboration.
+---
+
+LLMs are useful tools for PMs. They can help draft, summarize, compare, reformat, and prepare.
+
+They are also very good at making weak thinking feel finished.
+
+Use them with a simple rule: acceleration is only valuable when it improves learning, reorientation, or delivery. Faster artifact production by itself is not the goal.
+
+## Speed of making is not speed of learning
+
+LLMs can collapse the time it takes to produce a prototype, outline, PRD, FAQ, or research synthesis.
+
+That does not mean the team learned faster.
+
+Learning still depends on:
+
+- What question the artifact is meant to answer
+- Who reacts to it
+- Whether the reaction is from the real world or only from the team
+- How quickly the team changes direction based on what it learned
+- Whether decision-makers are willing to absorb the consequences
+
+If a prototype is generated in an afternoon and then sits unread for three weeks, the bottleneck was never the prototype.
+
+<Principle>
+Do not measure LLM value by how quickly artifacts appear. Measure it by whether the team gets to a better decision sooner.
+</Principle>
+
+## Bound the playground
+
+When uncertainty is high, a crisp vision can become fake certainty. The team starts working backward from a story it wants to be true.
+
+A better move is often to set boundaries and explore inside them:
+
+- Who is the user or operator?
+- What constraints cannot move?
+- What risks are unacceptable?
+- What assets, services, or patterns are already available?
+- What would make this not worth doing?
+- What learning would change the next decision?
+
+Inside those boundaries, LLMs can help generate options, stress-test language, produce disposable prototypes, or compare paths. The PM's job is to keep the exploration bounded and honest.
+
+<PMTakeaway>
+Under genuine uncertainty, do not rush to make the vision sound polished. Make the playground explicit, then learn your way through it.
+</PMTakeaway>
+
+## Do not fake collaboration
+
+An LLM can help one person simulate several roles. A PM can ask it to critique as a designer, rewrite as an engineer, or respond as a user.
+
+That can be useful preparation.
+
+It is not collaboration.
+
+Real collaboration creates friction. A designer misunderstands a requirement in a productive way. An engineer names a constraint that changes the shape of the product. A user reacts to a prototype differently than the team expected. That friction is not inefficiency. It is often where the useful signal lives.
+
+LLMs tend to reflect the user's frame back with more polish. That can make a PM feel like an idea has been tested when it has mostly been rehearsed.
+
+## Use LLMs before the room, not instead of the room
+
+Good uses:
+
+- Turn messy notes into a first-pass Blog / FAQ
+- Generate alternate framings before a discovery conversation
+- Draft acceptance criteria for review
+- Summarize open questions from tickets, PRs, or meeting notes
+- Prepare sharper prompts for Design, Engineering, or customer review
+- Identify assumptions that need real-world testing
+
+Bad uses:
+
+- Replacing Design critique with generated praise
+- Replacing Engineering review with simulated feasibility
+- Replacing user research with imagined personas
+- Treating generated consensus as team alignment
+- Creating more artifacts than the team can actually process
+
+The useful pattern is preparation, then confrontation with reality.
+
+## PM questions
+
+- What decision is this LLM output supposed to improve?
+- What would make us change direction?
+- Who still needs to react to this?
+- What human friction are we avoiding?
+- Are we producing more artifacts than we can absorb?
+- Did the tool reveal uncertainty, or cover it with polish?
+
+## Bottom line
+
+LLMs can make PMs faster. They can also make PMs more convincing while being less correct.
+
+Use them to prepare better questions, expose assumptions, and get to real collaboration sooner. Do not use them to avoid the people, constraints, and consequences that make product work real.
+
+## Reference
+
+<SourceList
+  sources={[
+    { label: 'Crown & Reach: A beef with Claude', href: 'https://reach.crownandreach.com/posts/a-beef-with-claude' },
+  ]}
+/>

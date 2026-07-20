@@ -1,0 +1,62 @@
+---
+title: "“AI”: Separating Truth from Hype"
+description: A practical guide to rules, statistics, machine learning, and LLMs.
+---
+
+Much of what is sold as “AI” is neither new nor particularly intelligent.
+
+PMs do not need to design models, but they do need to distinguish a useful technique from a marketing label attached to uncertainty.
+
+A useful question is: **What does the system do when it is wrong?**
+
+If a vendor, stakeholder, or prototype cannot answer that question clearly, the team does not understand the product well enough to ship it.
+
+## Different tools solve different problems
+
+- **Rules engines:** explicit `if this, then that` logic. Predictable, explainable, boring, and often correct.
+- **Statistics:** patterns, thresholds, regressions, and probabilities. A surprising amount of “AI” stops here.
+- **Supervised machine learning:** predictions learned from labeled examples.
+- **Unsupervised machine learning:** clustering or anomaly detection without predefined labels.
+- **Large language models:** fluent language generation and transformation. Fluency is not truth.
+
+Machine learning is not inherently better than rules. It is usually harder to reason about.
+
+## Common claims and less exciting reality
+
+- “Automatically identifies threats” may mean a classifier trained on historical examples.
+- “AI-powered decision support” may be a ranking heuristic in a nicer dashboard.
+- “Learns over time” may mean someone manually retrains it every quarter.
+- “Reduces operator workload” may mean operators now check both the model and the original data.
+
+None of those approaches are automatically bad. Imprecise language is.
+
+## When ML makes sense
+
+ML is useful when patterns are too complex for rules, data is sufficient and representative, and approximate outputs can still create value.
+
+It is risky when data quality is poor, the environment changes faster than the model, errors are rare but catastrophic, or decisions must be fully explainable.
+
+## LLM reality check
+
+LLMs are good at summarization, drafting, format translation, and assisting humans.
+
+They are bad at being reliably correct, respecting hidden constraints, and knowing when they do not know.
+
+Operational use should be bounded, clearly advisory where appropriate, monitored, and designed to fail safely.
+
+For PM-specific guidance, see [Responsible LLM Use for PMs](/docs/ai-enabled-development/responsible-llm-use-for-pms).
+
+## PM questions
+
+- What happens when it is wrong?
+- How often is it wrong?
+- How would we know?
+- Who owns the decision?
+- Could rules solve most of the problem more safely?
+- Are we adding intelligence, or opacity?
+
+“AI” is not a product strategy.
+
+<PMTakeaway>
+Skepticism is not anti-innovation. It is how useful automation avoids becoming an expensive way to hide uncertainty.
+</PMTakeaway>

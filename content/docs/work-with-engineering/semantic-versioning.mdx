@@ -1,0 +1,41 @@
+---
+title: Semantic Versioning
+description: How Core libraries communicate the impact of change.
+---
+
+Semantic Versioning, or SemVer, is a widely used convention for communicating the expected impact of a software release.
+
+It is how we version Core libraries and how many third-party libraries communicate change. This is educational guidance, not a universal rule.
+
+A version commonly looks like:
+
+`MAJOR.MINOR.PATCH`
+
+For example: `2.4.1`.
+
+- **Patch:** backward-compatible fixes
+- **Minor:** backward-compatible functionality
+- **Major:** incompatible or breaking changes
+
+The numbers are useful because they communicate expectations to consumers.
+
+## Why PMs should care
+
+A major release may require coordinated changes across multiple applications or programs. A minor release may unlock a new capability. A patch may resolve a defect without forcing consumer changes.
+
+The label is not a guarantee. Release notes, tests, migration guidance, and the actual behavior still matter.
+
+## Changesets
+
+Library and package teams commonly use Changesets to document changes near the code, select the intended version impact, and generate release notes.
+
+That makes versioning and communication easier, but it does not replace judgment.
+
+## References
+
+<SourceList
+  sources={[
+    { label: 'Semantic Versioning specification', href: 'https://semver.org/' },
+    { label: 'Changesets', href: 'https://github.com/changesets/changesets' },
+  ]}
+/>

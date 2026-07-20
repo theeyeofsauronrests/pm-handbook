@@ -1,0 +1,109 @@
+---
+title: Stories, Bugs, and Spikes
+description: Practical guidance for defining different kinds of work.
+---
+
+Tickets are product artifacts.
+
+They are how intent, context, and constraints move through the system, especially when the team is distributed or working asynchronously. They do not have to be awful.
+
+A good ticket communicates why, not just what. It enables autonomy without pretending to eliminate every question.
+
+The right standard is **just enough, just in time**.
+
+Too much detail ages badly and can over-prescribe the solution. Too little context creates rework and argument. Old tickets should be reviewed before they are estimated or assigned because assumptions decay.
+
+<LLMLeverage>
+Use an LLM to organize messy notes into the six-question ticket shape, compare a draft against known acceptance criteria, or point out where intent, risk, impact, and exclusions are missing.
+
+Do not turn a single sentence into a ticket with a prompt and call it product work. You are paid to think. If you hand the thinking to a model, you are still accountable for the decision, but now with worse visibility into why the ticket says what it says.
+</LLMLeverage>
+
+Different ticket types serve different purposes. Do not force every kind of work into a user-story template.
+
+## Stories
+
+Stories describe a small slice of user-facing behavior.
+
+A useful story answers:
+
+1. What are we doing?
+2. Why are we doing it?
+3. What are we not doing?
+4. What context is required?
+5. How do we know it is done?
+6. What questions remain?
+
+Stories should fit within an iteration and leave implementation choices to Design and Engineering where appropriate.
+
+If the "why" is unclear, priority debates will follow. If exclusions are unnamed, scope creep will write itself.
+
+Classic "As a user..." templates are fine when they help. They become nonsense when they describe a task instead of a goal.
+
+Nobody goes home satisfied because they submitted a form. What did they accomplish? Why did that action matter?
+
+## Bugs
+
+A bug describes a deviation from expected behavior.
+
+Include:
+
+- Minimal steps to reproduce
+- Expected behavior
+- Actual behavior
+- Environment or relevant conditions
+- Screenshots, logs, or response details when useful
+- User, operational, or business impact
+
+A good bug describes reality, not emotion. It should not be used to explore new functionality, capture vague dissatisfaction, or sneak in scope.
+
+## Spikes
+
+A spike is a time-boxed learning activity used when uncertainty blocks progress.
+
+Every spike needs:
+
+- A specific question
+- A time limit
+- A tangible deliverable
+- A decision the work will inform
+
+There must be a deliverable. "Research" without a decision or output is not a spike.
+
+Learning is the deliverable, but only when the learning changes what the team does next.
+
+## Decision quality
+
+Every ticket should make the decision context easier to see.
+
+For meaningful work, include:
+
+- What is known
+- What is assumed
+- What would change the plan
+- Whether the decision is reversible
+- What scope is intentionally excluded
+
+This does not mean every ticket needs a long template. It means tickets should not hide uncertainty behind confident phrasing.
+
+## Working ticket signals
+
+Tickets are working when:
+
+- The PM understands the value and knows where to find answers.
+- Design has enough context to solve the user problem without being boxed into one answer.
+- Engineering has enough context to solve the technical problem without being treated like an implementation service.
+- The team debates the best implementation, not the basic intent.
+
+## Cut scope before quality
+
+When time gets tight, cut scope before cutting correctness.
+
+Ask:
+
+- What is the smallest complete version that still creates value?
+- Can this be tested manually before it is automated?
+- What can be deferred without making the delivered behavior misleading?
+- If this does not finish inside the appetite, will we cut it or extend it?
+
+Shipping an incomplete slice of a larger idea is usually worse than shipping a smaller complete idea.

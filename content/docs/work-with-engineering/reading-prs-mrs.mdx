@@ -1,0 +1,56 @@
+---
+title: Reading PRs and MRs
+description: How PMs use code-change proposals as signals for progress, scope, and risk.
+---
+
+Pull Requests on GitHub and Merge Requests on GitLab are proposals to integrate a discrete change into a shared codebase.
+
+PMs are not expected to perform code review. They can still use PRs and MRs to understand intent, scope, progress, and delivery risk.
+
+## Review quality is contextual
+
+The amount of review varies with the reviewer, author, codebase, and risk of the change.
+
+A senior maintainer may perform a deep architectural review. A junior reviewer may focus on narrower concerns. A trusted maintainer may approve a familiar, low-risk change quickly. Some reviews are unfortunately little more than rubber stamps.
+
+A quiet review is therefore not automatically healthy or unhealthy.
+
+The PM question is:
+
+> Is the depth of review appropriate to the risk of the change?
+
+## What to look for
+
+### Intent
+
+A healthy PR or MR has a descriptive title, a short explanation of why the change exists, and links to the relevant ticket or feature artifact.
+
+### Scope
+
+Small changes are usually easier to review and reverse. Large or long-running changes may indicate hidden complexity, dependencies, or unresolved decisions. Size alone is not bad; unexamined size is.
+
+### Discussion
+
+Look for meaningful questions, requested changes, unresolved threads, and periods of inactivity.
+
+### Automation
+
+Builds, tests, linters, and other checks should generally pass before merge. Automation does not guarantee correctness, but repeated failures are always a signal.
+
+## Status is not impact
+
+- Open does not necessarily mean blocked.
+- Merged does not mean deployed.
+- Deployed does not mean adopted.
+
+PRs and MRs show engineering progress, not customer outcomes.
+
+## References
+
+<SourceList
+  sources={[
+    { label: 'GitLab Merge Requests', href: 'https://docs.gitlab.com/user/project/merge_requests/' },
+    { label: 'GitLab Merge Request Reviews', href: 'https://docs.gitlab.com/user/project/merge_requests/reviews/' },
+    { label: 'GitLab CI/CD', href: 'https://docs.gitlab.com/ci/' },
+  ]}
+/>

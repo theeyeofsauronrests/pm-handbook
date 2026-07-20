@@ -1,0 +1,79 @@
+---
+title: Software Basics for PMs
+description: Software concepts that help PMs read delivery risk without pretending to be engineers.
+---
+
+PMs do not need to be engineers.
+
+They do need enough software literacy to understand where risk, ambiguity, and dependency cost are accumulating.
+
+## Environments
+
+Software usually moves through environments before users rely on it: local development, review, staging, production, or some equivalent.
+
+The PM question is not “what is the environment called?”
+
+It is: where has this behavior actually been observed?
+
+## Releases and deployments
+
+Merged does not mean deployed. Deployed does not mean adopted. Adopted does not mean successful.
+
+PMs should distinguish:
+
+- Code merged into the main branch
+- A release prepared
+- A deployment completed
+- A feature enabled
+- A user workflow changed
+
+Each step can fail differently.
+
+## CI/CD
+
+Continuous integration and deployment pipelines are delivery confidence systems.
+
+Passing checks do not prove the product is correct, but failing or flaky checks are signals. They tell the team where reliability, test coverage, dependency health, or integration discipline may be weak.
+
+Small, frequent changes reduce risk. Long-lived branches increase uncertainty and late surprises.
+
+Healthy branching signals include frequent merges, small change sets, short-lived feature branches, and regular integration into the main line.
+
+## APIs and data contracts
+
+Products often depend on services talking to each other through APIs or data contracts.
+
+When those contracts change, downstream teams may need to change too. PMs should ask who consumes the contract, how changes are communicated, and what breaks if the contract is wrong.
+
+## Errors and observability
+
+Reliable systems fail in understandable ways.
+
+Observability means the team can see what happened: logs, metrics, traces, alerts, dashboards, or user reports. PMs do not need to design observability, but they should ask how the team will know whether a released change is working.
+
+## Cloud cost
+
+Cloud cost is not only an infrastructure concern.
+
+Refresh rates, data retention, map detail, fan-out, idle behavior, and always-on capacity are product choices with cost consequences. For a deeper version of this mental model, see [Cloud Costs for PMs](/docs/work-with-engineering/cloud-costs-for-pms).
+
+## Dependencies
+
+Dependencies are borrowed capability and borrowed risk.
+
+A package, service, runtime, shared library, or platform feature can accelerate delivery. It can also create upgrade work, security exposure, support burden, and coordination cost.
+
+## Bottom line
+
+Software literacy helps PMs ask better questions:
+
+- Where has this been tested?
+- What depends on it?
+- What happens if it fails?
+- How would we know?
+- How hard is it to reverse?
+- Who owns it after release?
+
+<PMTakeaway>
+PMs do not need implementation authority to read delivery risk. They need enough context to notice when risk is being hidden by status.
+</PMTakeaway>

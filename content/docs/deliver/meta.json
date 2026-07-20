@@ -1,0 +1,10 @@
+{
+  "title": "Deliver",
+  "defaultOpen": true,
+  "pages": [
+    "agile-delivery",
+    "stories-bugs-and-spikes",
+    "backlog-management",
+    "features-epics-themes-and-roadmaps"
+  ]
+}

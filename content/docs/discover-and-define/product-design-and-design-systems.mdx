@@ -1,0 +1,99 @@
+---
+title: Product Design and Design Systems
+description: How PMs work with design systems without turning them into a universal answer.
+---
+
+A design system is product infrastructure. Storybook's [Design Systems for Developers](https://storybook.js.org/tutorials/design-systems-for-developers/) is a useful primer on why design systems need to bridge design and implementation, not just collect UI pictures.
+
+It is not a sticker sheet, decoration layer, or shortcut around design judgment. It is a set of decisions that can help teams build coherent products with less local invention.
+
+Design exists to reduce usability risk. Poor usability is not cosmetic debt. It is product risk.
+
+Design is both social science and craft. Good product design understands the user, the task, the business context, and the constraints, then turns that understanding into something people can actually use.
+
+## Why PMs should care
+
+Design-system decisions affect product scope.
+
+When a team uses an existing component or pattern, it inherits consistency, accessibility work, and constraints. When a team asks for a new pattern, it may create maintenance, documentation, QA, and adoption work.
+
+That is a product tradeoff, not only a design preference.
+
+## Do not fork casually
+
+Local exceptions feel cheap at the moment of request.
+
+They become expensive when every team has a slightly different workflow, visual pattern, or interaction rule. The cost shows up later as user confusion, engineering drift, QA complexity, and slower changes.
+
+Before asking for an exception, ask:
+
+- What user need is not served by the existing pattern?
+- Is the pattern wrong, or is the local use case unusual?
+- Would improving the design system help other teams?
+- Who owns the new pattern after this project ships?
+- What happens when the design system changes?
+
+## Design systems still need discovery
+
+Using an existing pattern does not remove the need to understand the problem.
+
+PMs should work with Design to decide whether the problem needs:
+
+- An existing pattern
+- A better configuration of an existing pattern
+- A one-off exception
+- A new reusable pattern
+- A rethink of the workflow
+
+The right answer depends on the user need, not on the desire to move quickly.
+
+## Design systems are for scale
+
+A design system is not always the right tool.
+
+A small team building one application may be better served by a simple component directory and clear conventions. The cost of governance, documentation, tooling, and contribution can outweigh the benefit.
+
+The economics change when multiple teams are copying the same components, solving the same accessibility problems, or drifting into inconsistent interactions. Then a design system may be infrastructure.
+
+Infrastructure should move deliberately. If the design system changes faster than the products depending on it can absorb, it creates churn instead of leverage.
+
+## Design blocks, not ticket confetti
+
+Design work often benefits from being planned in coherent blocks rather than scattered across isolated tickets.
+
+Blocks help designers reason about the whole workflow: information architecture, states, edge cases, interaction rules, and visual hierarchy. Fragmented tickets can make each local change look reasonable while the product becomes harder to understand.
+
+PMs should still slice delivery. They should not slice design thinking so thin that coherence disappears.
+
+## Keep the artifact chain connected
+
+Design intent should survive implementation.
+
+Useful artifacts include:
+
+- Workflow sketches that clarify the problem
+- Figma designs that express interaction decisions
+- Component references that show implemented behavior
+- Tickets that link context instead of rewriting it badly
+- PRs or MRs that reveal where design intent changed in code
+
+When those artifacts drift apart, PMs should treat it as a product signal, not administrative cleanup.
+
+## Bottom line
+
+Design systems create leverage when teams treat them as long-lived product infrastructure with constraints, owners, and users.
+
+<PMTakeaway>
+Before requesting or rejecting a pattern, decide what the product needs: local fit, consistency, speed, accessibility, or a better system-level answer. Each has a cost.
+</PMTakeaway>
+
+<SourceList
+  sources={[
+    { label: 'SVPG: Product Management vs. Product Design', href: 'https://www.svpg.com/product-management-vs-product-design/' },
+    { label: 'SVPG: The Product Designer Role', href: 'https://www.svpg.com/the-product-designer-role/' },
+    { label: 'Usability Geek: User-Centered Design', href: 'https://usabilitygeek.com/user-centered-design-introduction/' },
+    { label: 'UXPin: Double Diamond Design Process', href: 'https://www.uxpin.com/studio/blog/double-diamond-design-process/' },
+    { label: 'Storybook: Design Systems for Developers', href: 'https://storybook.js.org/tutorials/design-systems-for-developers/' },
+    { label: 'Big Medium: Ship Faster by Building Design Systems Slower', href: 'https://bigmedium.com/ideas/design-system-pace-layers-slow-fast.html' },
+  ]}
+/>

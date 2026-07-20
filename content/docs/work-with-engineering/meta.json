@@ -1,0 +1,11 @@
+{
+  "title": "Work with Engineering",
+  "defaultOpen": true,
+  "pages": [
+    "software-basics-for-pms",
+    "cloud-costs-for-pms",
+    "reading-prs-mrs",
+    "semantic-versioning",
+    "managing-dependencies"
+  ]
+}

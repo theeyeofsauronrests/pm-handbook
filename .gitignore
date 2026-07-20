@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js and Fumadocs build output
+.next/
+.source/
+out/
+
+# Keep handbook docs tracked even when a parent repo ignores docs/
+!app/docs/
+!app/docs/**
+!content/
+!content/docs/
+!content/docs/**
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Logs and local machine files
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+.DS_Store
+
+# Tooling output
+coverage/
+playwright-report/
+test-results/
+.vercel/

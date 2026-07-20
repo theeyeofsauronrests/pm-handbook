@@ -1,0 +1,142 @@
+---
+title: Discovery and Framing
+description: How PMs turn ambiguity into product direction without pretending uncertainty is gone.
+---
+
+Discovery is the work of reducing uncertainty enough to make the next decision.
+
+It is not a ritual phase, a research theater, or a way to delay commitment until everyone feels safe. Good discovery turns a vague ask into a clearer frame: user, problem, constraints, tradeoffs, risks, and what not to build.
+
+Modern [product discovery](https://www.producttalk.org/product-discovery/) is a shared mindset across Product, Design, and Engineering. It works when the team learns together before committing to a solution shape.
+
+At its best, discovery is continuous. Teams should not make long strings of decisions without letting users, evidence, prototypes, or working software interrupt their assumptions.
+
+## Start with the struggling moment
+
+Do not start with the feature.
+
+Start with the moment where someone is trying to accomplish something and gets stuck. The more specific the moment, the better the framing.
+
+Ask:
+
+- Who is the person or team?
+- What are they trying to do?
+- What happens right before the problem appears?
+- What workaround exists today?
+- Why has this not already been solved?
+- Is this a user problem, a business problem, or both?
+
+If the problem can only be described in abstract nouns, it is probably not framed yet.
+
+## Separate truth from hypothesis
+
+Discovery work should make confidence visible.
+
+Use three buckets:
+
+- **Known:** evidence the team trusts
+- **Assumed:** beliefs that are plausible but unproven
+- **Unknown:** questions that could change the direction
+
+Do not flatten these into one polished narrative. A confident-sounding artifact that hides uncertainty is worse than a rough artifact that names it.
+
+## Bound the playground
+
+When uncertainty is high, it is often more useful to define boundaries than to force a crisp vision.
+
+Good boundaries include:
+
+- Users or contexts in scope
+- Constraints that cannot move
+- Risks the team will not accept
+- Existing assets, tools, services, or patterns to consider
+- Time or effort appetite
+- Signals that would cause the team to pivot, continue, or stop
+
+Inside those boundaries, the team can explore options without pretending it already knows the answer.
+
+## Share the work across disciplines
+
+Discovery is strongest when Product, Design, and Engineering each bring a different kind of risk into view.
+
+**Product** frames the problem and priority:
+
+- What problem are we solving, and why now?
+- What user, business, or operational outcome matters?
+- Which constraints shape the decision?
+- What should be built, bought, adapted, simplified, or stopped?
+
+**Design** makes the workflow tangible:
+
+- What does the user actually do today?
+- Where does friction or cognitive load appear?
+- What is the simplest interaction the user would expect?
+- Which assumptions can be tested with a prototype or workflow sketch?
+
+**Engineering** tests feasibility and system impact:
+
+- What data, integration, security, reliability, or performance constraints matter?
+- What is the lowest-risk path to learn?
+- What dependencies would this introduce?
+- What would make this expensive to operate or hard to change?
+
+Discovery fails when one discipline writes the answer and asks the others to decorate, approve, or implement it.
+
+## Use artifacts to force decisions
+
+A Blog / FAQ, prototype, workflow sketch, or spike should answer a question.
+
+Useful artifacts create motion:
+
+- They expose disagreement.
+- They reveal missing constraints.
+- They let Design and Engineering react.
+- They help users or stakeholders misunderstand the idea in useful ways.
+- They change what the team does next.
+
+If an artifact does not change a decision, it may only be documentation.
+
+<LLMLeverage>
+Use an LLM before a discovery conversation to list assumptions, draft interview prompts, reframe vague asks into sharper problem statements, or generate counterarguments the team should consider.
+
+Do not confuse that with evidence. The model has not watched a user struggle, felt the politics in the room, or learned which constraint is real. Treat its output as a thinking aid, not a source of truth.
+</LLMLeverage>
+
+## Keep users in the loop
+
+Discovery does not require a giant research program.
+
+Useful tactics include interviews, usability tests, assumption tests, journey maps, workflow sketches, opportunity trees, demand tests, and prototypes. The tactic matters less than the operating rhythm: the team should regularly expose its assumptions to people, evidence, or realistic use.
+
+The gap between how the team talks about a product and how users experience it is where discovery earns its keep.
+
+## Pick signals before solutions
+
+Before committing to a solution, decide which signals will matter.
+
+Useful signals can include:
+
+- User behavior
+- Workflow friction
+- Error rate
+- Support load
+- Delivery risk
+- Cost behavior
+- Adoption quality
+
+For more on metrics as decision inputs, see [Metrics and Signals](/docs/discover-and-define/metrics-and-signals).
+
+## Bottom line
+
+Discovery is not about proving the original idea was right. It is about learning what is true enough to decide what to do next.
+
+<PMTakeaway>
+Frame the next decision before you frame the whole product. Ask what signal would change the plan.
+</PMTakeaway>
+
+<SourceList
+  sources={[
+    { label: 'Teresa Torres: Product Discovery', href: 'https://www.producttalk.org/product-discovery/' },
+    { label: 'SVPG: The Origin of Product Discovery', href: 'https://www.svpg.com/the-origin-of-product-discovery/' },
+  ]}
+/>

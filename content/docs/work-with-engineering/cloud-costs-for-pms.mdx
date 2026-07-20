@@ -1,0 +1,97 @@
+---
+title: Cloud Costs for PMs
+description: How product behavior becomes cloud spend.
+---
+
+Cloud cost is driven by product behavior, not infrastructure diagrams.
+
+Every refresh rate, data contract, retention rule, and "small" UX choice can turn into compute hours, storage growth, network traffic, and always-on capacity. In highly regulated environments, the effect can be amplified by expensive regions, redundancy requirements, and limited elasticity.
+
+PMs may not choose the database, broker, container size, or cloud provider. They still influence the behavior that makes those choices expensive.
+
+## The FinOps mental model
+
+Use the simple model:
+
+`cost = rate x time x scale`
+
+- **Rate:** what one unit costs, such as CPU per hour, GB per month, or messages processed.
+- **Time:** how long it runs, such as always-on capacity versus occasional work.
+- **Scale:** how many copies exist, such as users, services, regions, tiles, topics, or consumers.
+
+Engineering often influences rate. Product decisions often influence time and scale.
+
+## Costs follow behavior
+
+Cloud bills respond to:
+
+- How often something updates
+- How much data moves
+- How many consumers receive it
+- How long data is retained
+- How much capacity stays warm when nobody is actively using it
+
+They do not care that something is "just a frontend."
+
+## Frontend behavior is not free
+
+Containerized web apps, dashboards, and map interfaces can create constant backend work.
+
+PM decisions that affect cost include:
+
+- **Refresh rate:** updating every second can create roughly ten times more backend work than updating every ten seconds.
+- **Idle behavior:** an operational dashboard left open all day can keep polling even when nobody is looking at it.
+- **Always-on capacity:** extra replicas for "just in case" scenarios become fixed monthly spend.
+
+Refresh rate and idle behavior are cost multipliers, not UX details.
+
+## Maps and tiles
+
+Map tiles are easy to underestimate because they feel like a visual detail.
+
+PM levers include:
+
+- **Zoom depth:** higher zoom levels require many more tiles to store, cache, and serve.
+- **Regeneration:** rebuilding base map tiles frequently may waste compute when the underlying map rarely changes.
+- **Cache lifetime:** short cache lifetimes force repeated work; longer lifetimes are often acceptable and much cheaper.
+
+The product question is not "Can the map do this?" It is "How fresh and detailed does the map need to be for this workflow?"
+
+## Event streams and telemetry
+
+Streaming systems are built to move and store events. They can also make expensive behavior feel invisible.
+
+Watch three things:
+
+- **Event frequency:** updates every second produce far more data than updates every 10 or 30 seconds.
+- **Retention:** keeping raw telemetry forever is expensive; summaries, tracks, or aggregates may be enough.
+- **Fan-out:** every new feature or integration that reads live data increases load.
+
+More consumers means more product value only when those consumers need the same freshness, history, and fidelity.
+
+## PM questions
+
+Ask:
+
+- How fresh does this data need to be?
+- What happens when nobody is using the screen?
+- How long do we need raw data, and why?
+- Can summaries replace raw history after a period of time?
+- How many consumers need live data?
+- What is the cost of one more region, dashboard, tenant, feed, or integration?
+- What user behavior would make the bill grow unexpectedly?
+
+## Bottom line
+
+Cost is a product constraint. Treat it like latency, reliability, usability, or security.
+
+<PMTakeaway>
+When a feature changes refresh rate, retention, fan-out, or always-on capacity, it changes the cost model. Put that tradeoff in the product decision, not in an infrastructure footnote.
+</PMTakeaway>
+
+<SourceList
+  sources={[
+    { label: 'FinOps Foundation: What is FinOps?', href: 'https://www.finops.org/introduction/what-is-finops/' },
+    { label: 'Vantage Handbook', href: 'https://handbook.vantage.sh/' },
+  ]}
+/>

@@ -1,0 +1,9 @@
+{
+  "title": "AI-Enabled Development",
+  "defaultOpen": true,
+  "pages": [
+    "ai-separating-truth-from-hype",
+    "ai-enabled-product-development-charter",
+    "responsible-llm-use-for-pms"
+  ]
+}

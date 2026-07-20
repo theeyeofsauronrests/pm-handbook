@@ -1,0 +1,60 @@
+---
+title: Managing Dependencies
+description: How PMs account for the leverage and cost of external, internal, and third-party software.
+---
+
+Dependencies are part of the product operating model.
+
+We assemble products from open-source libraries, internal libraries, platform services, third-party products, runtimes, and build tools. A dependency may solve a large problem quickly, but it also creates work that must be accounted for.
+
+## Dependencies are not free
+
+When a library is proposed, ask:
+
+- What problem does it solve?
+- Is that problem already solved by an existing tool, service, or product?
+- Who maintains it?
+- How active is the project?
+- What are its security and licensing implications?
+- What other dependencies does it introduce?
+- What will upgrading or replacing it require?
+- Are we willing to own it for the life of the product?
+
+The question is not only, “Can we use this?”
+
+It is, “Are we willing to carry this?”
+
+## The dependency chain
+
+Products depend on libraries, services, tools, and platforms. Those dependencies have dependencies of their own.
+
+On the frontend, the chain may include:
+
+- Node.js
+- TypeScript
+- React
+- Next.js
+- deck.gl
+- UI, state, testing, build, linting, and formatting packages
+
+Tooling dependencies such as Biome may not ship with the application, but they still affect development, CI, upgrades, and contributor workflow.
+
+## PM responsibilities
+
+PMs do not manage package files line by line. They help make dependency decisions visible and intentional.
+
+That includes:
+
+- Treating major upgrades as planned product work
+- Coordinating changes across consumers
+- Accounting for maintenance and migration costs
+- Resisting one-off forks that create unsupported local ownership
+- Understanding the dependencies the product consumes
+
+## Bottom line
+
+Dependencies are decisions with carrying cost. PMs should make that cost visible before it becomes invisible product debt.
+
+<PMTakeaway>
+The question is not whether a dependency accelerates the first version. It is whether the product can afford the ownership it creates.
+</PMTakeaway>

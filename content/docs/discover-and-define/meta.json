@@ -1,0 +1,10 @@
+{
+  "title": "Discover and Define",
+  "defaultOpen": true,
+  "pages": [
+    "discovery-and-framing",
+    "metrics-and-signals",
+    "blog-faq",
+    "product-design-and-design-systems"
+  ]
+}
