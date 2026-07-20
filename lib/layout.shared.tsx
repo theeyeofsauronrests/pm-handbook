@@ -19,6 +19,10 @@ export function baseOptions(): BaseLayoutProps {
         active: 'nested-url',
       },
       {
+        text: 'About Shane',
+        url: '/docs/start-here/about-shane-quinlan',
+      },
+      {
         text: 'Sources',
         url: '/docs/reference/sources-and-further-reading',
       },

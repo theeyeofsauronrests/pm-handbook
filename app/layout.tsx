@@ -37,6 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           search={{
             links: [
               ['Start Here', '/docs'],
+              ['About Shane', '/docs/start-here/about-shane-quinlan'],
               ['Build, Reuse, or Buy', '/docs/how-we-build/build-reuse-or-buy'],
               ['Reading PRs and MRs', '/docs/work-with-engineering/reading-prs-mrs'],
             ],

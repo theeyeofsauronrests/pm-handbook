@@ -8,6 +8,11 @@ const entries = [
     href: '/docs',
   },
   {
+    title: 'About Shane',
+    description: "Author context and links to more of Shane Quinlan's resources.",
+    href: '/docs/start-here/about-shane-quinlan',
+  },
+  {
     title: 'How We Build',
     description: 'Build, reuse, buy, product restraint, and reliability.',
     href: '/docs/how-we-build/build-reuse-or-buy',
